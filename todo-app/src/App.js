@@ -19,15 +19,21 @@ const App = () => {
     
   }
 
-  const deleteItem = () => {
-    console.log("deleted")
+  const deleteItem = (id) => {
+    // console.log("deleted")
+
+    setListArr((oldItems)=>{
+      return oldItems.filter((arr, index)=>{
+        return index!==id
+      })
+    })
 }
 
 
   return(
     <>
       <div className="main-div">
-        <div className="center-div"></div>
+        <div className="center-div">
         <br />
         <h1>TODO LIST</h1>
         <br />
@@ -40,6 +46,7 @@ const App = () => {
             return <ToDoList text = {item} id ={index} key = {index} onSelect = {deleteItem}/>
           })}
         </ol>
+      </div>
       </div>
     </>
   )
