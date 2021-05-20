@@ -1,12 +1,29 @@
 import React, { useState } from 'react'
+import ToDoList from "./ToDoList"
 
 const App = () => {
-  const [inputList, setInputList] = useState("Buy Apples");
-  const [listArr, setListArr] = useState([]);
+  var [inputList, setInputList] = useState("Buy Apples");
+  var [listArr, setListArr] = useState([]);
 
-  const itemEvent = () => {
-
+  
+  const itemEvent = (event) => {
+    setInputList(event.target.value);
   }
+
+  const incrementItem = () => {
+    // console.log("clicked")
+    setListArr((oldArray)=>{
+      return [...oldArray, inputList]
+    })
+    setInputList("")
+    
+  }
+
+  const deleteItem = () => {
+    console.log("deleted")
+}
+
+
   return(
     <>
       <div className="main-div">
@@ -14,12 +31,13 @@ const App = () => {
         <br />
         <h1>TODO LIST</h1>
         <br />
-        <input type="text" placeholder="Add An Item" onChange={itemEvent}/>
-        <button> + </button>
+        <input type="text" placeholder="Add An Item" onChange={itemEvent} value={inputList}/>
+        <button onClick={incrementItem}> + </button>
 
         <ol>
-          {listArr.map((item)=>{
-            <li>{item}</li>
+        {/* <li>Buy Apples</li> */}
+          {listArr.map((item, index)=>{
+            return <ToDoList text = {item} id ={index} key = {index} onSelect = {deleteItem}/>
           })}
         </ol>
       </div>
