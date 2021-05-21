@@ -20,6 +20,7 @@
   height: 600px;
   background-color: #ecedf2;
   box-shadow: 10px 10px 20px black;
+  /* overflow-y: scroll; */
   
 }
 
@@ -79,6 +80,7 @@
   padding: 10px;
   margin: 20px;
   box-shadow: 5px 5px 5px gray;
+  
 }
 
 .center-div ol .item li,i{
@@ -93,4 +95,31 @@
 .center-div ol .item i{
   color: #34656d;
 
+}
+
+.ol{
+  height: 450px;
+  overflow-y: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #34656d; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #34656d; 
 }

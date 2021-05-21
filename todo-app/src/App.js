@@ -41,12 +41,14 @@ const App = () => {
         <input type="text" placeholder="Add An Item" onChange={itemEvent} value={inputList}/>
         <button onClick={incrementItem}> + </button>
         </div>
+        <div className="ol">
         <ol>
         {/* <li>Buy Apples</li> */}
           {listArr.map((item, index)=>{
             return <ToDoList text = {item} id ={index} key = {index} onSelect = {deleteItem}/>
           })}
         </ol>
+        </div>
       </div>
       </div>
     </>
