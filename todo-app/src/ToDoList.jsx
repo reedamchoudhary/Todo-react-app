@@ -1,7 +1,7 @@
 const ToDoList = (props) =>{
     
     return(
-        <div>
+        <div className="item">
             <i className="far fa-times-circle" onClick = {()=>{
                 props.onSelect(props.id)
             }}></i>

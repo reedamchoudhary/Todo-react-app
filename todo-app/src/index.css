@@ -1,13 +1,96 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  /* color: white; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-div{
+  width: 100%;
+  height: 100vh;
+  background-color: #34656d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-div{
+  width: 400px;
+  height: 600px;
+  background-color: #ecedf2;
+  box-shadow: 10px 10px 20px black;
+  
+}
+
+.center-div h1{
+  text-align: center;
+  color: #34656d;
+}
+
+.center-div input{
+  width: 85%;
+  margin: 5px;
+  height: 30px;
+}
+
+.center-div button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: #ecedf2;
+  background-color: #34656d;
+  font-size: 3rem;
+  text-align: center;
+  /* display: table-cell;
+  vertical-align: middle; */
+  cursor: pointer;
+  line-height: 30px;
+  /* margin: auto; */
+  /* padding-bottom: 5px; */
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input input{
+  /* margin-bottom: 30px; */
+  border-radius: 25px;
+  background-color: #ecedf2;
+  box-shadow: inset 8px 8px 8px #cbced1,
+              inset -8px -8px 8px #ffffff;
+  border: none;
+  height: 50px;
+  font-size: 1rem;
+  padding: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  outline: none;
+}
+
+.center-div ol .item{
+  display: flex;
+  /* justify-content: center; */
+  align-items:center;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 5px 5px 5px gray;
+}
+
+.center-div ol .item li,i{
+  list-style: none;
+  text-transform: capitalize;
+  font-family: 'KoHo', sans-serif;
+  padding-left: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.center-div ol .item i{
+  color: #34656d;
+
 }

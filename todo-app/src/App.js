@@ -37,9 +37,10 @@ const App = () => {
         <br />
         <h1>TODO LIST</h1>
         <br />
+        <div className="input">
         <input type="text" placeholder="Add An Item" onChange={itemEvent} value={inputList}/>
         <button onClick={incrementItem}> + </button>
-
+        </div>
         <ol>
         {/* <li>Buy Apples</li> */}
           {listArr.map((item, index)=>{
